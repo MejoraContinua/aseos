@@ -1,0 +1,99 @@
+#nav-bar { border-top: 0px solid; border-bottom:0px solid #a8c6e6; background: #002955; padding:0 90px;  }
+
+/************** ALL LEVELS  *************/
+#nav li {   background-clip:initial;
+  background-color:#002955;
+  background-image:url(el_bg.png);
+  background-origin:initial;
+  background-position:10px 0px;
+  border-bottom-color:initial;
+  border-bottom-style:none;
+  border-bottom-width:initial;
+  border-image:initial;
+  border-left-color:#002955;
+  border-left-style:solid;
+  border-left-width:1px;
+  border-right-color:#002955;
+  border-right-style:solid;
+  border-right-width:1px;
+  border-top-color:#002955;
+  border-top-style:solid;
+  border-top-width:1px;
+  float:left;
+  list-style-type:none;
+  padding: 5px 5px 5px 5px;
+  margin:0px; }
+#nav li.over { z-index:100; }
+#nav li.active { z-index:100;}
+#nav a,
+#nav a:hover { display:block; text-decoration:none;}
+#nav span { display:block; }
+#nav a { line-height:0em; }
+
+
+/************ 1ST LEVEL  ***************/
+#nav li { float:left;  }
+#nav li.active {font-weight:bold; display: inline;
+				  background-attachment:initial;
+				  background-clip:initial;
+				  background-color:#F1F1F1;
+				  background-image:none     }
+#nav li.active em { display:block; position:absolute; font-weight:bold; top:0; right: 0px; height:28px;  }
+#nav a { float:left; padding:0 14px; color:#fff; line-height:2px;  }
+#nav li.over a { color:#002955; }
+
+
+/************ 1ST LEVEL RESET ************/
+#nav ul li,
+#nav ul li.active { list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0; float:none; height:auto; background:none; margin:0;  }
+#nav ul a,
+#nav ul a:hover { float:none; padding:0; line-height:1.3em; }
+#nav ul li.over a,
+#nav ul li.over a:hover,
+#nav ul a,
+#nav li.active li { font-weight:normal; }
+
+
+/************ 2ND LEVEL ************/
+#nav ul { list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0 0 3px 0; position:absolute; width:189px; top:27px; left:-10000px; border-top:1px solid #2d444f; }
+#nav ul ul  { list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:2px 0 0 0; border-top:0; background:url(nav3_bg.png) 0 0 no-repeat; left:100px; top:13px; }
+
+/* Show menu */
+#nav li.over ul { left:-1px; padding-top:3px; border-top: transparent;}
+#nav li.over ul ul { left:-10000px; }
+#nav li.over ul li.over ul { left:100px; }
+
+#nav ul li { background:url(nav2_li_bg.png) repeat-y; padding:0 0px; }
+#nav ul li a { background:#F1F1F1; }
+#nav ul li a:hover { background:#d9d9d9; }
+#nav li.over ul a,
+#nav ul li.active a,
+#nav ul li a,
+#nav ul li a:hover { color:#2f2f2f; }
+#nav ul span,
+#nav ul li.last li span { padding:5px 15px; background:url(nav2_link_bg.gif) repeat-x 0 100%; }
+#nav ul li.last span,
+#nav ul li.last li.last span { background:none; }
+#nav ul li.last { background:url(nav2_last_li_bg.png) no-repeat 0 100%; padding-bottom:2px; }
+
+#nav ul li.parent a,
+#nav ul li.parent li.parent a { background-image:url(nav2_parent_arrow.gif); background-position:100% 100%; background-repeat:no-repeat; }
+#nav ul li.parent li a,
+#nav ul li.parent li.parent li a { background-image:none; }
+
+/************ 3RD+ LEVEL ************/
+/* Cursors */
+#nav li.parent a,
+#nav li.parent li.parent a,
+#nav li.parent li.parent li.parent a { cursor:default; }
+
+#nav li.parent li a,
+#nav li.parent li.parent li a,
+#nav li.parent li.parent li.parent li a { cursor:pointer; }
+
+/* Show menu */
+#nav ul ul ul { left:-10000px; list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0; }
+#nav li.over ul li.over ul ul { left:-10000px;}
+#nav li.over ul li.over ul li.over ul { left:100px; }
+
+#nav-bar:after, #nav-container:after { content:"."; display:block; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
